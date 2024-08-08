@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+@function rem($pixels) {
+  @if math.is-unitless($pixels) {
+    @return math.div($pixels, 16) * 1rem;
+  }
+  @error "The value #{$pixels} is not unitless.";
+}
+
+@function em($pixels) {
+  @if math.is-unitless($pixels) {
+    @return math.div($pixels, 16) * 1em;
+  }
+  @error "The value #{$pixels} is not unitless.";
+}
