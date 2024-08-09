@@ -1,0 +1,5 @@
+@use '../util/' as u;
+.wrapper {
+  width: min(u.rem(1200), 100% - u.rem(48));
+  margin-inline: auto;
+}
